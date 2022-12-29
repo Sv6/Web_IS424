@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Generate a CV</title>
+        <link rel="stylesheet" href="/project/myStyle.css" />
+        <script src="/project/actions.js"></script>
+
+    </head>
+    <body>
+        <!--Navigation Bar-->
+        <nav>
+            <label>Project</label>
+            <ul>
+                <li><a href="/project/overview.html">Home</a></li>
+                <li><a href="/project/generateCV.html">Generate Your CV</a></li>
+                <li><a href="/project/contact.html">ABOUT</a></li>
+
+            </ul>
+        </nav>
+
+        <div>
+        <h1>Generate Your CV</h1>
+        <hr />
+        <!--action=CV.html-->
+        <form id="cvForm" action="CV.html" method="dialog">
+            
+
+            <!--General Data-->
+            <p><strong>General Data</strong></p>
+
+            <label>Full Name:</label>
+                <input type="text" id="name" />
+                <br />
+            
+            <label>Gender:</label>
+                <input type="radio" name="gender" value="male" id="gMale"/>
+                Male
+                <input type="radio" name="gender" value="Female" id="gFemale"/>
+                Female
+                <br />
+            
+
+            <label>Birthdate:</label>
+                <input type="date" id="bDate"/>
+                <br />
+            <hr />
+            <!--Contact Info-->
+            <p><strong>Contact Information</strong></p>
+
+            <label>Email:</label>
+                <input type="text" id="email" />
+                <br />
+
+            <label>Phone Number:</label>
+                <input type="text" id="phone" />
+                <br />
+            <hr />
+
+            <p><strong>Education</strong></p>
+
+            <!--Education --- Dynamic-->
+            <label>Certificates:</label>
+                <br />
+            <div id="c"></div>
+            <p><button onclick="addCertificate()">Add new Certificate</button></p>
+            
+            <label>Experience:</label>
+                <br />
+            <div id="e"></div>
+            <p><button onclick="addExperience()">Add new Experience</button></p>
+
+            <label>Languages:</label>
+                <br />
+            <div id="l"></div>
+            <p><button onclick="addlanguage()">Add new Language</button></p>
+                <br />
+            
+
+            <button type="submit" onclick="createCV()">Generate</button>
+            <button type="reset">Clear</button>
+
+        </form>
+    </div>
+
+    </body>
+</html>
